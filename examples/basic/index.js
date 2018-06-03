@@ -1,0 +1,1 @@
+import Glade from "fanlight";

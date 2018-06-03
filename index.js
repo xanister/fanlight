@@ -1,1 +1,1 @@
-module.exports = require('./src/Glade');
+module.exports = require('./src/index');
