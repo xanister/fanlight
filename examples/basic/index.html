@@ -1,9 +1,8 @@
-<html>
-  <body>
-    <script type="module">
-      import fanlight from "fanlight";
+<script type="module">
+  import Fanlight from "./node_modules/fanlight/src/fanlight.js";
 
-      console.log(fanlight);
-    </script>
-  </body>
-</html>
+  let f = new Fanlight();
+
+  // For debugging
+  window.f = f;
+</script>

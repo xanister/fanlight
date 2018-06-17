@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/xanister/fanlight/issues"
   },
-  "homepage": "https://github.com/xanister/fanlight#readme"
+  "homepage": "https://github.com/xanister/fanlight#readme",
+  "dependencies": {
+    "aperture": "github:xanister/aperture"
+  }
 }
