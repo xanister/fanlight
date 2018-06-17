@@ -1,7 +1,6 @@
 ```bash
 npm install
-npm run build
-npm run server
+npm run start:dev
 ```
 
-Visit http://localhost:3000
+Visit http://localhost:8080
