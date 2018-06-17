@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
+    "reserver": "npm update && npm run build && npm run server",
     "server": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

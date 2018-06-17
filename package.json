@@ -18,6 +18,7 @@
   "homepage": "https://github.com/xanister/fanlight#readme",
   "dependencies": {
     "aperture": "github:xanister/aperture",
-    "biosphere": "github:xanister/biosphere"
+    "biosphere": "github:xanister/biosphere",
+    "carriage": "github:xanister/carriage"
   }
 }
