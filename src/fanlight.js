@@ -8,10 +8,12 @@ export default class Fanlight {
     this.biosphere = new Biosphere();
     this.carriage = new Carriage();
 
-    window.requestAnimationFrame(() => run());
+    this.run();
   }
 
   run() {
     this.aperture.items = this.biosphere.player.serializeView();
+  
+    window.requestAnimationFrame(() => this.run());
   }
 }
