@@ -1,5 +1,7 @@
-```
-node server.js
+```bash
+npm install
+npm run build
+npm run server
 ```
 
-http://localhost:3000
+Visit http://localhost:3000
