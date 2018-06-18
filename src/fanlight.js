@@ -6,18 +6,21 @@ export default class Fanlight {
   constructor() {
     this.aperture = new Aperture({ yOrigin: document.body.clientHeight * 0.75});
     this.biosphere = new Biosphere();
+    this.biosphere.universe.populate();
+    this.biosphere.player.x = 1000;
     this.carriage = new Carriage();
 
-    this.run();
+    this._run();
   }
 
-  run() {
+  _run() {
     // Send any user input to the player
     this.biosphere.player.inputs = this.carriage.serialize();
 
     // Send any visible items to the view
     this.aperture.items = this.biosphere.player.serializeView();
   
-    window.requestAnimationFrame(() => this.run());
+    // TODO: Separate from animation
+    window.requestAnimationFrame(() => this._run());
   }
 }
