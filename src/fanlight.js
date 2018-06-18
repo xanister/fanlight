@@ -8,6 +8,7 @@ export default class Fanlight {
     this.biosphere = new Biosphere();
     this.biosphere.universe.populate();
     this.biosphere.player.x = 1000;
+    this.biosphere.player.nearbyRange = this.aperture.canvas.width;
     this.carriage = new Carriage();
 
     this._run();
