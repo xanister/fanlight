@@ -4,9 +4,9 @@ import Carriage from "carriage";
 
 export default class Fanlight {
   constructor() {
-    this.aperture = new Aperture();     // Manages view
-    this.biosphere = new Biosphere();   // Manages world
-    this.carriage = new Carriage();     // Manages user input
+    this.aperture = new Aperture({ yOrigin: document.body.clientHeight * 0.75});
+    this.biosphere = new Biosphere();
+    this.carriage = new Carriage();
 
     this.run();
   }
