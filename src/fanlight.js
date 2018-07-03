@@ -3,13 +3,15 @@ import Biosphere from "biosphere";
 import Carriage from "carriage";
 
 export default class Fanlight {
-  constructor() {
+  constructor(debug = false) {
     this.aperture = new Aperture({ yOrigin: document.body.clientHeight * 0.75});
     this.biosphere = new Biosphere();
     this.biosphere.universe.populate();
-    this.biosphere.player.x = 1000;
+    this.biosphere.player.x = 500;
     this.biosphere.player.nearbyRange = this.aperture.canvas.width;
     this.carriage = new Carriage();
+
+    if (debug) window.fanlight = this;
 
     this._run();
   }

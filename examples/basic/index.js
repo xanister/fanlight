@@ -1,6 +1,5 @@
 import Fanlight from "fanlight";
 
-let f = new Fanlight();
+let f = new Fanlight(true);
 
-// For debugging
-window.f = f;
+console.log("Started fanlight basic example");
