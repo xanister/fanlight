@@ -1,6 +1,6 @@
 ```bash
 npm install
-npm run start:dev
+npm start
 ```
 
-Visit http://localhost:8080
+Visit http://localhost:9000
