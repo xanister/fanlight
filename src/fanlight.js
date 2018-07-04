@@ -1,5 +1,5 @@
 import Aperture from "aperture";
-import Biosphere, { Gaia } from "biosphere";
+import { Biosphere, Gaia } from "biosphere";
 import Carriage from "carriage";
 
 export default class Fanlight {
