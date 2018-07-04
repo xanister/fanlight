@@ -1,13 +1,12 @@
 import Aperture from "aperture";
-import Biosphere from "biosphere";
+import Biosphere, { Gaia } from "biosphere";
 import Carriage from "carriage";
 
 export default class Fanlight {
   constructor(debug = false) {
     this.aperture = new Aperture({ yOrigin: document.body.clientHeight * 0.75});
     this.biosphere = new Biosphere();
-    this.biosphere.universe.populate(100);
-    this.biosphere.player.x = 500;
+    Gaia.populate(this.biosphere.universe, 100);
     this.biosphere.player.nearbyRange = this.aperture.canvas.width;
     this.carriage = new Carriage();
 
@@ -22,7 +21,7 @@ export default class Fanlight {
 
     // Send any visible items to the view
     this.aperture.items = this.biosphere.player.serializeView();
-  
+
     // TODO: Separate from animation
     window.requestAnimationFrame(() => this._run());
   }
