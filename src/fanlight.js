@@ -6,9 +6,10 @@ export default class Fanlight {
   constructor(debug = false) {
     this.aperture = new Aperture({ yOrigin: document.body.clientHeight * 0.75});
     this.biosphere = new Biosphere();
-    Gaia.populate(this.biosphere.universe);
-    this.biosphere.player.nearbyRange = this.aperture.canvas.width;
     this.carriage = new Carriage();
+
+    // TODO: MOVE THIS TO SERIALIZE VIEW PARAM
+    this.biosphere.player.nearbyRange = this.aperture.canvas.width;
 
     if (debug) {
       window.fanlight = this;
