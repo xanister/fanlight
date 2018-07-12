@@ -9,9 +9,10 @@ export default class Fanlight {
     this.carriage = new Carriage();
 
     // TODO: MOVE THIS TO SERIALIZE VIEW PARAM
-    this.biosphere.player.nearbyRange = this.aperture.canvas.width;
+    this.biosphere.player.nearbyRange = this.aperture.canvas.width * 2;
 
     if (debug) {
+      console.log("Starting fanlight in debug mode");
       window.fanlight = this;
       window.player = this.biosphere.player;
     }
@@ -21,10 +22,10 @@ export default class Fanlight {
 
   _run() {
     // Send any user input to the player
-    this.biosphere.player.inputs = this.carriage.serialize();
+    this.biosphere.updatePlayerInput(this.carriage.serialize());
 
     // Send any visible items to the view
-    this.aperture.items = this.biosphere.player.serializeView();
+    this.aperture.items = this.biosphere.getPlayerView();
 
     // TODO: Separate from animation
     window.requestAnimationFrame(() => this._run());
